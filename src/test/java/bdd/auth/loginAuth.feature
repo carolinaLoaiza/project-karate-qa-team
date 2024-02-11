@@ -1,22 +1,23 @@
+@automation-api
 Feature: Login
 
-  Scenario: Succesful login
+  @login1
+  Scenario: Successful login
     Given url urlBase
     And path 'api/login'
-    And request {email:"carlosz@gmail.com", password:"12345678"}
+    And request {email:"carotesting@gmail.com", password:"12345678"}
     When method post
     Then status 200
-    And match response.access_token == "#notnull"
     And match response.access_token == "#string"
-    And match response.user.email == "carlosz@gmail.com"
+    And match response.user.email == "carotesting@gmail.com"
 
-  Scenario Outline: Succesful login several users
+  @login2
+  Scenario Outline: Successful login several users
     Given url urlBase
     And path 'api/login'
     And request {email:<email>, password:<password>}
     When method post
     Then status 200
-    And match response.access_token == "#notnull"
     And match response.access_token == "#string"
     And match response.user.email == "<email>"
 
@@ -25,7 +26,8 @@ Feature: Login
       | carlosz@gmail.com     | 12345678 |
       | carotesting@gmail.com | 12345678 |
 
-  Scenario Outline: Not succesful login several users
+  @login3
+  Scenario Outline: Not successful login several users
     Given url urlBase
     And path 'api/login'
     And form field email = '<email>'
@@ -41,11 +43,11 @@ Feature: Login
       | carlosz@gmail.com     |          |
       | carotesting@gmail.com | 1234567  |
 
-  @login
-  Scenario: Succesful login to repeat
+  @loginBackground
+  Scenario: Successful login to use in the Background
     Given url urlBase
     And path 'api/login'
-    And request {email:"carlosz@gmail.com", password:"12345678"}
+    And request {email:"carotesting@gmail.com", password:"12345678"}
     When method post
     Then status 200
     * def token = response.access_token

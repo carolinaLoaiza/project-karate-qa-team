@@ -1,7 +1,8 @@
+
 Feature: Cambiar estado producto
 
   Background:
-    * def responseLogin = call read('classpath:bdd/auth/loginAuth.feature@login')
+    * def responseLogin = call read('classpath:bdd/auth/loginAuth.feature@loginBackground')
     * def token = responseLogin.token
     Given header Authorization = 'Bearer ' + token
     And url urlBase
