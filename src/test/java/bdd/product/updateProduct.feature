@@ -21,7 +21,7 @@ Feature: Update products
     And match response.description == body.description
 
   @updateProduct2
-  Scenario: Not successful updating a product
+  Scenario: Unsuccessful product update - non-existent
     * def id = 2700
     * def body = read('classpath:resources/json/product/bodyUpdateProduct.json')
     Given url urlBase
@@ -32,7 +32,7 @@ Feature: Update products
     And match response.error == "Call to a member function update() on null"
 
   @updateProduct3
-  Scenario Outline: Not successful updating a product - errors
+  Scenario Outline: Unsuccessful product update - errors
     * def id = 647
     Given url urlBase
     And path '/api/v1/producto/' + id

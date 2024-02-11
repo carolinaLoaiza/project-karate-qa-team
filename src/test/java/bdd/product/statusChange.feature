@@ -1,4 +1,4 @@
-
+@sample-automation-api
 Feature: Cambiar estado producto
 
   Background:

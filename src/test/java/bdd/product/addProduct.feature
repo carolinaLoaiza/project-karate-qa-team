@@ -1,3 +1,4 @@
+@sample-automation-api
 Feature: Ejemplos practicos Karate
     @CP07
     Scenario: Crear un post con docString en variable

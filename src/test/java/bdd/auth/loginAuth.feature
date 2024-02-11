@@ -12,7 +12,7 @@ Feature: Login
     And match response.user.email == "carotesting@gmail.com"
 
   @login2
-  Scenario Outline: Successful login several users
+  Scenario Outline: Successful login with several users
     Given url urlBase
     And path 'api/login'
     And request {email:<email>, password:<password>}
@@ -27,7 +27,7 @@ Feature: Login
       | carotesting@gmail.com | 12345678 |
 
   @login3
-  Scenario Outline: Not successful login several users
+  Scenario Outline: Unsuccessful login with several users
     Given url urlBase
     And path 'api/login'
     And form field email = '<email>'
