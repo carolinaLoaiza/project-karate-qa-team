@@ -1,0 +1,28 @@
+[
+  {
+    "body": {
+      "codigo": "CL0002",
+      "nombre": "ALTERNADOR PL200NS",
+      "medida": "UND",
+      "marca": "Generico1",
+      "categoria": "Repuestos",
+      "precio": "35.00",
+      "stock": "60",
+      "estado": "3",
+      "descripcion": "ALTERNADOR PL200NS"
+    }
+  },
+  {
+    "body": {
+      "codigo": "CL0002",
+      "nombre": "ALTERNADOR PL200NS",
+      "medida": "UND",
+      "marca": "Generico",
+      "categoria": "Repuestos1",
+      "precio": "35.00",
+      "stock": "60",
+      "estado": "3",
+      "descripcion": "ALTERNADOR PL200NS"
+    }
+  }
+]
